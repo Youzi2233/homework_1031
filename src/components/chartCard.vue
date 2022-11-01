@@ -43,38 +43,6 @@ const echartOption = Object.assign(
       top: "25",
     },
     tooltip: {},
-    xAxis: [
-      {
-        data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"],
-        axisLabel: {
-          color: "#000",
-        },
-        axisLine: {
-          lineStyle: {
-            color: "#000",
-          },
-        },
-      },
-    ],
-    yAxis: {
-      axisLabel: {
-        color: "#000",
-      },
-      axisLine: {
-        show: true,
-      },
-    },
-    series: [
-      {
-        name: "销量",
-        type: "bar",
-        data: [5, 20, 36, 10, 10, 20],
-        itemStyle: {
-          opacity: 1,
-          color: "red",
-        },
-      },
-    ],
   },
   props.echartOption
 );

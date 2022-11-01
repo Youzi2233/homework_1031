@@ -13,6 +13,8 @@ import {
     // 组件类型的定义后缀都为 ComponentOption
     TitleComponentOption,
     TooltipComponent,
+    ToolboxComponent,
+    VisualMapComponent,
     LegendComponent,
     TooltipComponentOption,
     GridComponent,
@@ -45,6 +47,8 @@ echarts.use([
     DatasetComponent,
     TransformComponent,
     LegendComponent,
+    ToolboxComponent,
+    VisualMapComponent,
     BarChart,
     LineChart,
     PieChart,

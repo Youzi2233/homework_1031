@@ -11,9 +11,6 @@ const echartOption = {
   tooltip: {
     trigger: "axis",
   },
-  legend: {
-    data: ["Email", "Union Ads", "Video Ads", "Direct", "Search Engine"],
-  },
   grid: {
     left: "3%",
     right: "4%",

@@ -58,7 +58,6 @@ import AreaDistribution from "./components/AreaDistribution.vue";
   .left_lay {
     width: 30%;
     left: 0;
-    opacity: 0.5;
   }
   .middle_lay {
     padding: 0 5px;
@@ -66,13 +65,11 @@ import AreaDistribution from "./components/AreaDistribution.vue";
     height: 15%;
     position: absolute;
     left: 30%;
-    opacity: 0.5;
     z-index: 999;
   }
   .right_lay {
     width: 30%;
     right: 0;
-    opacity: 0.5;
   }
 }
 </style>
