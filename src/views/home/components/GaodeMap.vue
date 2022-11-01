@@ -4,9 +4,9 @@
 
 <script setup lang="ts">
 import AMapLoader from "@amap/amap-jsapi-loader";
-import { shallowRef } from "@vue/reactivity";
+import { shallowRef, onBeforeUnmount } from "vue";
 
-const map = shallowRef(null);
+const map = shallowRef<any>(null);
 
 // 初始化地图
 function initMap() {
@@ -19,8 +19,19 @@ function initMap() {
       map.value = new AMap.Map("container", {
         //设置地图容器id
         viewMode: "3D", //是否为3D地图模式
-        zoom: 5, //初始化地图级别
-        center: [105.602725, 37.076636], //初始化地图中心点位置
+        zoom: 10, //初始化地图级别
+        center: [119.974602, 31.814095], //初始化地图中心点位置
+      });
+      map.value.on("click", function (ev: any) {
+        // 触发事件的对象
+        var target = ev.target;
+        // 触发事件的地理坐标，AMap.LngLat 类型
+        var lnglat = ev.lnglat;
+        // 触发事件的像素坐标，AMap.Pixel 类型
+        var pixel = ev.pixel;
+        // 触发事件类型
+        var type = ev.type;
+        console.log(target, lnglat, pixel, type);
       });
     })
     .catch((e) => {
@@ -29,6 +40,10 @@ function initMap() {
 }
 
 initMap();
+
+onBeforeUnmount(() => {
+  map.value && map.value.destroy();
+});
 </script>
 
 <style lang="less" scoped>
